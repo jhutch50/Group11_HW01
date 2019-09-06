@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Homework1</string>
+    <string name="bmi">Body Mass Index (BMI).</string>
+    <string name="weight">Weight</string>
+    <string name="height">Height</string>
+    <string name="calculate_bmi">Calculate BMI</string>
+    <string name="tv_result">Result</string>
+    <string name="lb">0</string>
+    <string name="zero">0</string>
+    <string name="yourbmi">Your BMI:</string>
+    <string name="youare">You are</string>
+    <string name="tv_status">Status</string>
+    <string name="inches">Inches</string>
+    <string name="feet">Feet</string>
+    <string name="pounds">lb.</string>
+    <string-array name="bmi_options">
+        <item>Underweight</item>
+        <item>Normal Weight</item>
+        <item>Overweight</item>
+        <item>Obesity</item>
+    </string-array>
+
+
+</resources>
