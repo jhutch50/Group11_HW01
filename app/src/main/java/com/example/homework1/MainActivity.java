@@ -1,5 +1,5 @@
 /*
- * Assignment 2
+ * Homework 2
  * Main Activity
  * Joshua Hutcheson
  * Ormelia Robinson
