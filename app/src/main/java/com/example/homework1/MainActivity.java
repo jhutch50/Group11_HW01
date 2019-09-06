@@ -8,9 +8,12 @@
 
 package com.example.homework1;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -30,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText et_feet;
     private EditText et_inches;
 
+    AlertDialog.Builder builder;
     double bmi;
     double pounds;
     int inches;
@@ -40,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setTitle("BMI Calculator");
-
+        builder = new AlertDialog.Builder(this);
         tv_bmi = findViewById(R.id.tv_bmi);
         tv_weight = findViewById(R.id.tv_weight);
         tv_height = findViewById(R.id.tv_height);
@@ -65,6 +69,16 @@ public class MainActivity extends AppCompatActivity {
         button_calculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
+
+                builder.setMessage("BMI Calculated").setPositiveButton("Ok", new DialogInterface.OnClickListener(){
+                    @Override
+                    public void onClick(DialogInterface dialog, int which){
+                        Log.d("demo","Clicked Ok");
+                    }
+                });
+                AlertDialog alert = builder.create();
+
+                alert.show();
                 String tempPounds = et_pounds.getText().toString();
                 String tempFeet = et_feet.getText().toString();
                 String tempInches = et_inches.getText().toString();
